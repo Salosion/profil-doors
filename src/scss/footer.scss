@@ -1,3 +1,115 @@
-//====================================================================================================
+.footer {
+  background-color: #191E32;
+  color: $defaultColor;
+  font-weight: 500;
+  line-height: math.div(19, 14);
+  @include adaptiveValue("padding-top", 130, 50);
+  @include adaptiveValue("padding-bottom", 100, 65);
+}
 
-//====================================================================================================
+.footer-title {
+  font-size: rem(30);
+  line-height: math.div(41, 30);
+
+  &:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+}
+
+.body-footer {
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: rem(30);
+    flex-wrap: wrap;
+    row-gap: rem(30);
+  }
+
+  &__column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(60);
+
+    @media (max-width:$mobile){
+      gap: rem(30);
+    }
+  }
+
+  &__company-item,
+  &__products-item {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__company-link,
+  &__products-link {
+    text-transform: uppercase;
+  }
+
+  &__contacts-item {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__contacts-link_phone,
+  &__contacts-link_email,
+  &__contacts-link_time {
+    position: relative;
+    padding-left: rem(40);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(30);
+      height: rem(30);
+      left: 0;
+      top: rem(-5);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__contacts-link_phone {
+    &::before {
+      background-image: url('@img/icons/phone.svg');
+    }
+  }
+
+  &__contacts-link_time {
+    &::before {
+      background-image: url('@img/icons/time.svg');
+    }
+  }
+
+  &__contacts-link_email {
+    &::before {
+      background-image: url('@img/icons/mail.svg');
+    }
+  }
+
+  &__address-item {
+    position: relative;
+    padding-left: rem(10);
+    &:not(:last-child) {
+      margin-bottom: rem(14)
+    }
+
+    &::before{
+      content:'';
+      position: absolute;
+      width: rem(5);
+      height: rem(5);
+      background-color: $defaultColor;
+      border-radius: 50%;
+      left: 0;
+      top: rem(8);
+    }
+  }
+
+  &__logo {
+    display:block;
+    max-width: rem(120);
+    margin: 0 auto;
+  }
+}
