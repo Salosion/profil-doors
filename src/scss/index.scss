@@ -1,3 +1,54 @@
-//====================================================================================================
+.info-page {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 180, 60);
 
-//====================================================================================================
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width:$tablet) {
+      flex-wrap: wrap;
+      @include adaptiveValue("row-gap", 50, 15, 991.98, 320);
+    }
+  }
+
+  &__title {
+    max-width: rem(250);
+    margin-bottom: 0px !important;
+    @include adaptiveValue("font-size", 70, 35);
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include adaptiveValue("column-gap", 150, 30);
+    @include adaptiveValue("row-gap", 130, 30);
+
+    @media (min-width:$tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__item-span {
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: math.div(27, 20);
+  }
+
+  &__item-num {
+    line-height: math.div(84, 70);
+    font-weight: 600;
+    @include adaptiveValue("font-size", 70, 40);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 33, 15);
+    }
+  }
+
+  &__item-text {
+    max-width: rem(390);
+    font-weight: 500;
+    @include adaptiveValue("font-size", 30, 20);
+    line-height: math.div(41, 30);
+  }
+}
