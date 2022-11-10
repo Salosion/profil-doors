@@ -6,7 +6,39 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main class="page page__home">
+        @@include('html/_catalog.htm',{
+          "title": "Наш каталог"
+        })
+        <section class="page__info info-page">
+          <div class="info-page__container">
+            <div class="info-page__body">
+              <h1 class="info-page__title title">PROFIL DOORS</h1>
+              <div class="info-page__items">
+                <div class="info-page__item">
+                  <span class="info-page__item-span">Более</span>
+                  <p class="info-page__item-num">3 000</p>
+                  <p class="info-page__item-text">Оригинальных моделей в каталоге</p>
+                </div>
+                <div class="info-page__item">
+                  <span class="info-page__item-span">Гарантия</span>
+                  <p class="info-page__item-num">5 лет</p>
+                  <p class="info-page__item-text">А также выгодные скидки и акционные предложения</p>
+                </div>
+                <div class="info-page__item">
+                  <span class="info-page__item-span">На рынке</span>
+                  <p class="info-page__item-num">с 2010 года</p>
+                  <p class="info-page__item-text">Наше ключевое преимущество — полный комплекс услуг</p>
+                </div>
+                <div class="info-page__item">
+                  <span class="info-page__item-span">Более</span>
+                  <p class="info-page__item-num">5 000</p>
+                  <p class="info-page__item-text">Конструкций реализовали под заказ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 			@@include('html/_footer.htm',{})
 		</div>
