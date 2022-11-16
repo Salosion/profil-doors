@@ -57,6 +57,7 @@
 
 .reviews-page {
   @include adaptiveValue("padding-bottom", 175, 50);
+  @include adaptiveValue("padding-top", 100, 30);
 
   &__items {
     display: flex;
@@ -89,5 +90,59 @@
 
   &__name {
     padding-bottom: rem(10);
+  }
+}
+
+//=========================================================================================================================================
+
+.offer-page {
+  background-image: url('@img/offer/01.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  @include adaptiveValue("padding-top", 345, 70);
+  @include adaptiveValue("padding-bottom", 205, 75);
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $defaultColor;
+    font-size: rem(30);
+    line-height: math.div(41, 30);
+    @include adaptiveValue("font-size", 30, 18);
+  }
+
+  &__title {
+    max-width: rem(630);
+    @include adaptiveValue("padding-bottom", 45, 35);
+  }
+
+  &__link-icon {
+    transform: rotate(90deg);
+  }
+
+  &__text {
+    max-width: rem(280);
+    @include adaptiveValue("padding-top", 100, 35);
+    @include adaptiveValue("padding-bottom", 107, 35);
+  }
+
+  &__popup {
+    background-color: $defaultColor;
+    padding: rem(15) rem(0);
+    @include adaptiveValue("padding-left", 75, 45);
+    @include adaptiveValue("padding-right", 75, 45);
+    border-radius: rem(100);
+    color: $darkColor;
+    white-space: nowrap;
+    transition: background-color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $accentColor;
+      }
+    }
   }
 }
