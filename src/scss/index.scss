@@ -1,5 +1,4 @@
 .info-page {
-  @include adaptiveValue("padding-top", 100, 40);
   @include adaptiveValue("padding-bottom", 180, 60);
 
   &__body {
@@ -15,7 +14,6 @@
   &__title {
     max-width: rem(250);
     margin-bottom: 0px !important;
-    @include adaptiveValue("font-size", 70, 35);
   }
 
   &__items {
@@ -109,9 +107,8 @@
     align-items: center;
     text-align: center;
     color: $defaultColor;
-    font-size: rem(30);
-    line-height: math.div(41, 30);
     @include adaptiveValue("font-size", 30, 18);
+    line-height: math.div(41, 30);
   }
 
   &__title {
@@ -144,5 +141,55 @@
         background-color: $accentColor;
       }
     }
+  }
+}
+
+//=========================================================================================================================================
+
+.doors-page {
+  @include adaptiveValue("padding-bottom", 150, 70);
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiveValue("column-gap", 40, 15);
+    @include adaptiveValue("row-gap", 70, 30);
+  }
+}
+
+.item-doors {
+  border: 1px solid #000;
+  border-top: none;
+
+  &__series {
+    font-weight: 500;
+    font-size: rem(30);
+    line-height: math.div(41, 30);
+    text-align: center;
+  }
+
+  &_info {
+    border: none;
+  }
+
+  &__span {
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: math.div(27, 20);
+
+    &:not(:last-child) {
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__number {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 30, 18);
+    line-height: math.div(41, 30);
+    max-width: rem(370);
   }
 }

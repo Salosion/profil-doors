@@ -8,9 +8,11 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page page__home">
-      @@include('html/_catalog.htm',{
-      "title": "Наш каталог"
-      })
+      <section class="page__catalog catalog-page">
+        @@include('html/_product.htm',{
+        "title": "Наш каталог"
+        })
+      </section>
       <section class="page__info info-page">
         <div class="info-page__container">
           <div class="info-page__body">
@@ -36,6 +38,79 @@
                 <p class="info-page__item-num">5 000</p>
                 <p class="info-page__item-text">Конструкций реализовали под заказ</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__catalog catalog-page">
+        @@include('html/_product.htm',{
+        "title": "Наши работы"
+        })
+      </section>
+      <section class="page__doors doors-page">
+        <div class="doors-page__container">
+          <h3 class="doors-page__title title">Фирменные серии</h3>
+          <div class="doors-page__items">
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/01.jpg" alt="Дверь">
+              <p class="item-doors__series">L</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/02.jpg" alt="Дверь">
+              <p class="item-doors__series">U</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/03.jpg" alt="Дверь">
+              <p class="item-doors__series">X</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/04.jpg" alt="Дверь">
+              <p class="item-doors__series">XN</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/05.jpg" alt="Дверь">
+              <p class="item-doors__series">AG</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/04.jpg" alt="Дверь">
+              <p class="item-doors__series">XN</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/05.jpg" alt="Дверь">
+              <p class="item-doors__series">AG</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/04.jpg" alt="Дверь">
+              <p class="item-doors__series">XN</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/05.jpg" alt="Дверь">
+              <p class="item-doors__series">AG</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/02.jpg" alt="Дверь">
+              <p class="item-doors__series">U</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/06.jpg" alt="Дверь">
+              <p class="item-doors__series">AGN</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/07.jpg" alt="Дверь">
+              <p class="item-doors__series">AGK</p>
+            </div>
+            <div class="doors-page__item item-doors">
+              <img class="item-doors__img-ibg" src="@img/doors/05.jpg" alt="Дверь">
+              <p class="item-doors__series">AG</p>
+            </div>
+            <div class="doors-page__item item-doors item-doors_info">
+              <span class="item-doors__span">Более</span>
+              <p class="item-doors__number title">9 000</p>
+              <p class="item-doors__text">
+                Клиентов приобрели двери
+                в фирменной сети
+                с мая 2019 года
+              </p>
             </div>
           </div>
         </div>

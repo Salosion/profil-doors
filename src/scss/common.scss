@@ -6,6 +6,6 @@
   color: $mainColor;
 
   &:not(:last-child) {
-    margin-bottom: rem(45);
+    @include adaptiveValue("margin-bottom", 45, 25);
   }
 }

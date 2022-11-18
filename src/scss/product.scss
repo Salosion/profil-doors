@@ -1,0 +1,67 @@
+.product {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+}
+
+.navigation-slider-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(30);
+  @include adaptiveValue("padding-top", 50, 25);
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rem(1) solid #000;
+    border-radius: 50%;
+    width: rem(50);
+    height: rem(50);
+    cursor: pointer;
+  }
+
+  &__next {
+    transform: rotate(180deg);
+  }
+}
+
+.body-product-slide {
+  padding-top: rem(15);
+  font-size: rem(20);
+  line-height: math.div(27, 20);
+  color: $darkColor;
+
+  &__title {
+    padding-bottom: rem(25);
+    @include adaptiveValue("font-size", 20, 16);
+  }
+
+  &__box {
+    @include adaptiveValue("gap", 25, 15);
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    @include adaptiveValue("font-size", 30, 25);
+    line-height: math.div(41, 30);
+    font-weight: 500;
+    color: $darkColor;
+  }
+
+  &__btn {
+    color: $defaultColor;
+    background-color: $accentColor;
+    border-radius: rem(100);
+    padding: rem(6) rem(33);
+  }
+}
+
+.slider-product {
+  &__slide-img {
+    @include adaptiveValue("height", 662, 400);
+    // height: percent(662, 524);
+  }
+}
