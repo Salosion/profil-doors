@@ -8,7 +8,7 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page page__home">
-      <section class="page__catalog catalog-page">
+      <section class="page__catalog catalog-page" id="catalog">
         @@include('html/_product.htm',{
         "title": "Наш каталог"
         })
@@ -42,12 +42,12 @@
           </div>
         </div>
       </section>
-      <section class="page__catalog catalog-page">
+      <section class="page__catalog catalog-page" id="delivery">
         @@include('html/_product.htm',{
         "title": "Наши работы"
         })
       </section>
-      <section class="page__doors doors-page">
+      <section class="page__doors doors-page" id="work">
         <div class="doors-page__container">
           <h3 class="doors-page__title title">Фирменные серии</h3>
           <div class="doors-page__items">
@@ -115,7 +115,7 @@
           </div>
         </div>
       </section>
-      <section class="page__offer offer-page">
+      <section class="page__offer offer-page" id="services">
         <div class="offer-page__container">
           <div class="offer-page__body">
             <h5 class="offer-page__title">
@@ -132,7 +132,7 @@
           </div>
         </div>
       </section>
-      <section class="page__reviews reviews-page">
+      <section class="page__reviews reviews-page" id="reviews">
         <div class="reviews-page__container">
           <h3 class="reviews-page__title title">Отзывы</h3>
           <div class="reviews-page__items">
