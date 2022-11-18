@@ -1,5 +1,4 @@
 .info-page {
-  @include adaptiveValue("padding-top", 100, 40);
   @include adaptiveValue("padding-bottom", 180, 60);
 
   &__body {
@@ -15,7 +14,6 @@
   &__title {
     max-width: rem(250);
     margin-bottom: 0px !important;
-    @include adaptiveValue("font-size", 70, 35);
   }
 
   &__items {
@@ -109,9 +107,8 @@
     align-items: center;
     text-align: center;
     color: $defaultColor;
-    font-size: rem(30);
-    line-height: math.div(41, 30);
     @include adaptiveValue("font-size", 30, 18);
+    line-height: math.div(41, 30);
   }
 
   &__title {
@@ -146,3 +143,5 @@
     }
   }
 }
+
+//=========================================================================================================================================

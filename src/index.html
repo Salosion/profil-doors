@@ -8,9 +8,11 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page page__home">
-      @@include('html/_catalog.htm',{
-      "title": "Наш каталог"
-      })
+      <section class="page__catalog catalog-page">
+        @@include('html/_product.htm',{
+          "title": "Наш каталог"
+        })
+      </section>
       <section class="page__info info-page">
         <div class="info-page__container">
           <div class="info-page__body">
@@ -39,6 +41,11 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="page__catalog catalog-page">
+        @@include('html/_product.htm',{
+        "title": "Наши работы"
+        })
       </section>
       <section class="page__offer offer-page">
         <div class="offer-page__container">

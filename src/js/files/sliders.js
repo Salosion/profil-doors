@@ -17,7 +17,7 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+//import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
@@ -99,6 +99,56 @@ function initSliders() {
       // 	},
       // },
 
+      on: {
+
+      }
+    });
+  }
+
+  if (document.querySelector('.product__slider')) {
+    new Swiper('.product__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+      /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      */
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      // centeredSlides: true,  
+      spaceBetween: 30,
+      // autoHeight: true,
+      speed: 800,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      loop: true,
+      //preloadImages: false,
+      //lazy: true,
+      // Arrows
+      navigation: {
+        prevEl: '.navigation-slider-product__prev',
+        nextEl: '.navigation-slider-product__next',
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 80,
+        },
+        1080: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1630: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
       on: {
 
       }
