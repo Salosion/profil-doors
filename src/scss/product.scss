@@ -60,9 +60,7 @@
 }
 
 .slider-product {
-  &__slide {
-  }
-  &__slide-img{
+  &__slide-img {
     @include adaptiveValue("height", 662, 400);
     // height: percent(662, 524);
   }
