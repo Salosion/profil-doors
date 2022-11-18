@@ -138,7 +138,7 @@ function initSliders() {
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 80,
+          spaceBetween: 45,
         },
         1080: {
           slidesPerView: 2,

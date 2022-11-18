@@ -218,7 +218,7 @@
 }
 
 .navigation-slider {
-  @media (max-width:$mobile){
+  @media (max-width:$mobile) {
     display: none;
   }
 
@@ -282,18 +282,23 @@
       padding-left: rem(65);
     }
 
+    &::after {
+      content: '';
+      position: fixed;
+      background-color: #202020;
+      height: rem(100);
+      transition: all 0.3s ease 0s;
+      z-index: 3;
+      left: -100%;
+      width: 100%;
+    }
+
     .menu-open & {
       left: 0;
+      transition: all 0.3s ease 0s;
 
       &::after {
-        content: '';
-        position: fixed;
-        background-color: #202020;
-        height: rem(100);
-        z-index: 3;
-        top: 0;
         left: 0;
-        width: 100%;
       }
     }
   }
